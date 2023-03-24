@@ -1,8 +1,8 @@
-from diffusers import StableDiffusionPipeline, EulerAncestralDiscreteScheduler
+from diffusers import StableDiffusionPipeline, EulerAncestralDiscreteScheduler, DPMSolverMultistepScheduler
 import torch
 
 model_id = "mann-e/mann-e_4_rev-1-3"
-scheduler = EulerAncestralDiscreteScheduler.from_pretrained(model_id, subfolder="scheduler")
+scheduler = DPMSolverMultistepScheduler.from_pretrained(model_id, subfolder="scheduler")
 
 pipe = StableDiffusionPipeline.from_pretrained(model_id, scheduler=scheduler)
 pipe = pipe.to("cpu")
