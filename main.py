@@ -12,11 +12,11 @@ def dummy(images, **kwargs):
 
 pipe.safety_checker = dummy
 
-prompt = "a historical city in an (((island))), view from the sea, cyberpunk, flashing blue and orange neon lights, night, fantasy, highly detailed digital painting, trending on artstation, concept art, sharp focus, illustration, art by midjourney" 
+prompt = "elden ring style, a beautiful painting of a castle in a beautiful mountain landscape, fantasy, gloomy, blue hour, trending on artstation, concept art, digital painting, art by midjourney" 
 negative_prompt = "low quality, blurry"
 width = 512
 height = 512 
 
 print(f'prompt is {prompt}')
-image = pipe(prompt=prompt, negative_prompt=negative_prompt, num_inference_steps=100, width=width, height=height, guidance_scale=10).images[0]
+image = pipe(prompt=prompt, negative_prompt=negative_prompt, num_inference_steps=20, width=width, height=height, guidance_scale=10).images[0]
 image.save("output.png")
