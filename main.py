@@ -11,3 +11,8 @@ def dummy(images, **kwargs):
     return images, False 
 
 pipe.safety_checker = dummy
+
+prompt = "a historical city in an (((island))), view from the sea, cyberpunk, flashing blue and orange neon lights, night, fantasy, highly detailed digital painting, trending on artstation, concept art, sharp focus, illustration, art by midjourney" 
+negative_prompt = "low quality, blurry"
+width = 512
+height = 512 
